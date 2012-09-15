@@ -7,6 +7,8 @@ See example1.html and example1.worker.js :
 
 #### example1.html:
 ```html
+    <div id="log"></div>
+    
     <script src="../lib/foreman.js"></script>
     <script>
         foreman
