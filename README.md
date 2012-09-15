@@ -6,6 +6,7 @@ Foreman
 See example1.html and example1.worker.js :
 
 #### example1.html:
+```javascript
     <script src="../lib/foreman.js"></script>
     <script>
         foreman
@@ -15,8 +16,10 @@ See example1.html and example1.worker.js :
             })
             .start();
     </script>
+```
 
 #### example1.worker.js
+```javascript
     importScripts('../lib/foreman.js');
     
     setInterval( function() {
@@ -24,3 +27,4 @@ See example1.html and example1.worker.js :
     }, 1000 );
     
     foreman.start();
+```
