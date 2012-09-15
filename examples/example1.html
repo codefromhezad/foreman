@@ -1,0 +1,11 @@
+
+<script src="../lib/foreman.js"></script>
+<script>
+    foreman
+        .use('example1.worker.js')
+        .on( 'result', function(data) {
+            document.getElementById('log').innerHTML += data + '<br />';
+        })
+        .start();
+    
+</script>
