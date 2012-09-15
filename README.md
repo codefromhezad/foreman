@@ -33,6 +33,9 @@ foreman.send('an_action', "action data");
 
 ### Example
 
+In this example, the worker generates a random number every second and sends it to the frontend with an action "result".
+On "result", the front-end logs the number in a div.
+
 #### example1.html:
 ```html
     <div id="log"></div>
