@@ -3,16 +3,16 @@ Foreman
 
 ### Quick-start
 
-1. Import foreman script from front
+1. Import front script
 ```html
     <script src="foreman.js"></script>
 ```
-   or from the worker
+or worker script
 ```javascript
     importScripts('foreman.js')
 ```
    
-2. There is now a object called "foreman" available. Use it to set worker file
+2. Set worker file (obviously unavailable in the worker)
 ```javascript
     foreman.use('YOUR_WORKER_FILE.js')
 ```
@@ -26,7 +26,7 @@ Foreman
 ```javascript
     foreman.start();
 ```
-5. Send data to the worker
+5. Send data
 ```javascript
 foreman.send('an_action', "action data");
 ```
@@ -60,3 +60,7 @@ foreman.send('an_action', "action data");
 ```
 
 ### Debugging helpers
+
+In the worker, you can use the log(), warn() or error() functions. Data will be
+logged in the browser console (because of workers restrictions, you can't log non-
+atomic data).
