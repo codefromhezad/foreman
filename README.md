@@ -3,7 +3,7 @@ Foreman
 
 ### Quick-start
 
-(Or head straight to the [example](#example) to see how it works in two seconds)
+Take a look at the [example](#example) to see how it works.
 
 1. Import front script
 ```html
