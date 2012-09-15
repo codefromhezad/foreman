@@ -6,7 +6,7 @@ Foreman
 See example1.html and example1.worker.js :
 
 #### example1.html:
-```javascript
+```html
     <script src="../lib/foreman.js"></script>
     <script>
         foreman
