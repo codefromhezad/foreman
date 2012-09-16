@@ -31,7 +31,8 @@ foreman.start();
 ```
 5. Send data
 ```javascript
-foreman.send('an_action', "action data");
+var action_data = [0, 1, 2, 3, 4];
+foreman.send('an_action', action_data);
 ```
 
 Example
