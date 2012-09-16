@@ -41,7 +41,7 @@ Example
 In this example, the worker generates a random number every second and sends it to the frontend with an action "result".
 On "result", the front-end logs the number in a div.
 
-### example1.html:
+#### example1.html:
 ```html
 <div id="log"></div>
 
@@ -56,7 +56,7 @@ On "result", the front-end logs the number in a div.
 </script>
 ```
 
-### example1.worker.js
+#### example1.worker.js
 ```javascript
 importScripts('../lib/foreman.js');
 
