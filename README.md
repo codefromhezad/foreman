@@ -70,6 +70,4 @@ foreman.start();
 Debugging helpers
 ---------------------------
 
-In the worker, you can use the log(), warn() or error() functions. Data will be
-logged in the browser console (because of workers restrictions, you can't log non-
-atomic data).
+In the worker, you can use the log(), warn() or error() functions. Data will be logged in the browser console (because of workers restrictions, you can't log non-atomic data).
