@@ -15,7 +15,7 @@ or worker script
 importScripts('foreman.js')
 ```
    
-2. Create new Foreman instance(s) (obviously unavailable in the worker)
+2. Create new Foreman instance(s) (Obviously, 'YOUR_WORKER_FILE.js' is not needed when creating a new Foreman instance from the worker)
 ```javascript
 var my_worker = new Foreman('YOUR_WORKER_FILE.js')
 ```
