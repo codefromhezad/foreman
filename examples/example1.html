@@ -1,12 +1,30 @@
-<div id="log"></div>
+<style>
+    div { float: left; width: 400px; border: 1px solid #404040; color: #404040; padding: 10px; margin: 10px;}
+</style>
+
+<div id="log1">
+    <strong>First Worker</strong><br />
+</div>
+
+<div id="log2">
+    <strong>Second Worker</strong><br />
+</div>
 
 <script src="../lib/foreman.js"></script>
 <script>
-    foreman
-        .use('example1.worker.js')
-        .on( 'result', function(data) {
-            document.getElementById('log').innerHTML += data + '<br />';
-        })
-        .start();
+    var first_worker  = new Foreman('example1.worker.js');
+    var second_worker = new Foreman('example1.worker.js');
+    
+    first_worker.on('result', function(data) {
+        
+        document.getElementById('log1').innerHTML += data + '<br />';
+    
+    }).start();
+    
+    second_worker.on('result', function(data) {
+        
+        document.getElementById('log2').innerHTML += data + '<br />';
+    
+    }).start();
     
 </script>

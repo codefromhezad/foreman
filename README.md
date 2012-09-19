@@ -15,50 +15,68 @@ or worker script
 importScripts('foreman.js')
 ```
    
-2. Set worker file (obviously unavailable in the worker)
+2. Create new Foreman instance(s) (obviously unavailable in the worker)
 ```javascript
-foreman.use('YOUR_WORKER_FILE.js')
+var my_worker = new Foreman('YOUR_WORKER_FILE.js')
 ```
 3. Set listeners
 ```javascript
-foreman.on( 'info', function(data) {
+my_worker.on( 'info', function(data) {
     alert('data');
 })
 ```
 4. Start foreman
 ```javascript
-foreman.start();
+my_worker.start();
 ```
 5. Send data
 ```javascript
 var action_data = [0, 1, 2, 3, 4];
-foreman.send('an_action', action_data);
+my_worker.send('an_action', action_data);
 ```
 
 Example
 --------------------
 
-In this example, the worker generates a random number every second and sends it to the frontend with an action "result".
+In this example, two workers are spawn (in the example, they use the same file but you can load different workers).
+Those workers generate a random number every second and they send it to the frontend with an action "result".
 On "result", the front-end logs the number in a div.
 
 #### example1.html:
 ```html
-<div id="log"></div>
+<div id="log1">
+    <strong>First Worker</strong><br />
+</div>
+
+<div id="log2">
+    <strong>Second Worker</strong><br />
+</div>
 
 <script src="../lib/foreman.js"></script>
 <script>
-    foreman
-        .use('example1.worker.js')
-        .on( 'result', function(data) {
-            document.getElementById('log').innerHTML += data + '<br />';
-        })
-        .start();
+    var first_worker  = new Foreman('example1.worker.js');
+    var second_worker = new Foreman('example1.worker.js');
+    
+    first_worker.on('result', function(data) {
+        
+        document.getElementById('log1').innerHTML += data + '<br />';
+    
+    }).start();
+    
+    second_worker.on('result', function(data) {
+        
+        document.getElementById('log2').innerHTML += data + '<br />';
+    
+    }).start();
+    
 </script>
 ```
 
 #### example1.worker.js
 ```javascript
 importScripts('../lib/foreman.js');
+
+var foreman = new Foreman();
 
 setInterval( function() {
     foreman.send('result', Math.random());
