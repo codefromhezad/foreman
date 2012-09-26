@@ -12,6 +12,11 @@
 
 <script src="../lib/foreman.js"></script>
 <script>
+    
+    if( ! window.Worker ) {
+        throw("Web Workers are not supported on this browser :/");
+    }
+    
     var first_worker  = new Foreman('example1.worker.js');
     var second_worker = new Foreman('example1.worker.js');
     
