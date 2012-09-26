@@ -95,5 +95,5 @@ Some words
 ----------------------------
 
 Initially made for internal projects at Zagett.
-* [zagett.com](http://zagett.com/) | [facebook.com/Zagett](http://www.facebook.com/Zagett) | [twitter.com/zagett_agency](https://twitter.com/zagett_agency)
+* [zagett.com](http://zagett.com/) | [facebook.com/zagett](http://www.facebook.com/zagett) | [twitter.com/zagett_agency](https://twitter.com/zagett_agency)
 * [hezad.com](http://hezad.com)
