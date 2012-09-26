@@ -94,7 +94,6 @@ In the worker, you can use the log(), warn() or error() functions. Data will be 
 Some words
 ----------------------------
 
-Initially made for internal projects at Zagett (a digital communication agency), we decided to open source it.
-* Agency website : http://zagett.com
-* Agency Facebook page : http://www.facebook.com/Zagett
-* My Blog : http://hezad.com
+Initially made for internal projects at Zagett.
+* [zagett.com](http://zagett.com/) | [facebook.com/Zagett](http://www.facebook.com/Zagett) | [twitter.com/zagett_agency](https://twitter.com/zagett_agency)
+* [hezad.com](http://hezad.com)
