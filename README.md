@@ -95,6 +95,6 @@ Some words
 ----------------------------
 
 Initially made for internal projects at Zagett (a digital communication agency), we decided to open source it.
-Agency website : http://zagett.com
-Agency Facebook page : http://www.facebook.com/Zagett
-My Blog : http://hezad.com
+* Agency website : http://zagett.com
+* Agency Facebook page : http://www.facebook.com/Zagett
+* My Blog : http://hezad.com
